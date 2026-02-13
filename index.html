@@ -201,6 +201,49 @@
             }
         }
 
+        /* Victory Screen Specifics */
+        .victory-title {
+            font-family: var(--font-romantic);
+            color: var(--heart-red);
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .victory-photo-container {
+            margin: 20px auto;
+            width: 300px;
+            height: 200px;
+            background-color: #eee;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            .victory-title {
+                font-family: Arial, sans-serif; /* Explicit user request */
+                font-size: 1.5rem; /* Optimal length */
+                line-height: 1.4;
+            }
+            
+            .victory-photo-container {
+                width: 100%;
+                max-width: 250px;
+                height: 150px;
+            }
+            
+            .ui-overlay {
+                padding: 20px;
+                width: 90%;
+            }
+        }
+
         .dpad-btn {
             width: 60px;
             height: 60px;
@@ -252,8 +295,8 @@
 
         <!-- Victory Screen Overlay -->
         <div id="victoryScreen" class="ui-overlay">
-            <h2 style="font-family: var(--font-romantic); color: var(--heart-red); font-size: 3.5rem; line-height: 1.2;">I WILL LOVE you TILL THE END OF TIME  babe cuz you are MINE 💕</h2>
-            <div style="margin: 20px auto; width: 300px; height: 200px; background-color: #eee; border-radius: 10px; overflow: hidden; display: flex; align-items: center; justify-content: center; border: 4px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            <h2 class="victory-title">I WILL LOVE you TILL THE END OF TIME  babe cuz you are MINE 💕</h2>
+            <div class="victory-photo-container">
                  <!-- Customized Photo Path -->
                  <img src="victory.jpg" onerror="this.src='https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?w=400'" alt="Us" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
