@@ -131,7 +131,7 @@
                 margin: 0 auto;
             }
             h1 {
-                font-size: 2rem;
+                font-size: 1.5rem; /* Smaller Title */
             }
         }
 
@@ -148,12 +148,32 @@
             border-radius: 25px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.1);
             text-align: center;
-            display: none; 
             z-index: 10;
             display: flex; /* Flexbox for internal centering */
             flex-direction: column;
             align-items: center;
             justify-content: center;
+        }
+
+        @media (max-width: 600px) {
+            .ui-overlay {
+                padding: 20px;
+                width: 90%;
+            }
+            #victoryScreen h2 {
+                font-size: 1.8rem !important; /* Force smaller font on mobile */
+                line-height: 1.2;
+            }
+            #startScreen h2 {
+                font-size: 1.8rem !important;
+            }
+            p {
+                font-size: 0.9rem;
+            }
+            button {
+                padding: 10px 30px;
+                font-size: 1rem;
+            }
         }
         
         /* Fix ensure hidden overlay is actually hidden */
